@@ -1,16 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+import React from 'react';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 
 const CartWidget = () => {
+    const { totalUnidades } = useContext(CartContext);
+    const unidades = totalUnidades();
 
-    let icon = <img  src={process.env.PUBLIC_URL + "/logo192.png"} width="80" alt= "logo" />
-
-    return(
-        <div>
-            <Link className="navbar-brand" to={"/"}>{icon}</Link>
-            <hr />
-        </div>
-    )
-}
+    return (
+        <Link to="/cart">
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <span className="material-icons">shopping_cart</span>
+                <span>{unidades}</span>
+            </div>
+        </Link>
+    );
+};
 
 export default CartWidget;

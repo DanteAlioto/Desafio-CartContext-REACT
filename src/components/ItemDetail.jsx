@@ -1,14 +1,18 @@
-import React, {useState} from "react";
-import ItemCount from "./ItemCount";
-import {Link} from 'react-router-dom';
 
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
+import ItemCount from '../Item/ItemCount';
 
-const ItemDetail = ({item}) => {
-    const [goToCart,setGoToCart] = useState(false);
+const ItemDetail = ({ item }) => {
+    //  const valores = useContext(CartContext) //valores es un obj {} valores.addToCart
+    const [cantidad, setCantidad] = useState(0);
+    const { addToCart } = useContext(CartContext);
 
-    const onAdd = (quantity) => {
-        setGoToCart(true);
-    }
+    const onAdd = (cantidad) => {
+        setCantidad(cantidad);
+        addToCart(item, cantidad);
+    };
 
     return(
         
