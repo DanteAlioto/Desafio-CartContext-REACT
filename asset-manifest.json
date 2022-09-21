@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Desafio-CartContext-REACT/static/css/main.073c9b0a.css",
+    "main.js": "/Desafio-CartContext-REACT/static/js/main.14004a99.js",
+    "index.html": "/Desafio-CartContext-REACT/index.html",
+    "main.073c9b0a.css.map": "/Desafio-CartContext-REACT/static/css/main.073c9b0a.css.map",
+    "main.14004a99.js.map": "/Desafio-CartContext-REACT/static/js/main.14004a99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.14004a99.js"
+  ]
+}
